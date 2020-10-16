@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>博客管理</title>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/me.css" />
+  </head>
+  <body>
+    <!-- 导航 -->
+    <nav class="ui inverted attached segment m-padding-tb-mini m-shadow-small">
+      <div class="ui container fluid">
+        <div class="ui inverted secondary stackable menu">
+          <h2 class="ui teal header item">管理后台</h2>
+            <a href="#" class="active item m-item m-mobile-hide">
+              <i class="home icon"></i>笔记
+            </a>
+          <a href="#" class="item m-item m-mobile-hide">
+            <i class="idea icon"></i>分类
+          </a>
+          <a href="#" class="item m-item m-mobile-hide">
+            <i class="tags icon" style="height: 10px;"></i>标签
+          </a>
+          <div class="right m-item menu m-mobile-hide">
+            <div class="ui dropdown item">
+              <div class="text">
+                <img src="http://iph.href.lu/100x100" class="ui avatar image">
+                LocaZZZZZ
+              </div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <a href="#" class="item">
+                  注销
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        href="#"
+        class="ui menu toggle black icon button m-right-top m-mobile-show"
+      >
+        <i class="sidebar icon"></i>
+      </a>
+    </nav>
+    <!-- 二级导航 -->
+    <div class="ui menu padded attached">
+      <div class="ui container">
+        <div class="right menu">
+          <a href="#" class="active teal item">发布</a>
+          <a href="#" class="item">列表</a>
+        </div>
+      </div>
+    </div>
+    <!-- 中间内容 -->
+    <div class="m-padding-tb-large m-container">
+      <div class="ui container">
+        <form action="#" method="POST" class="ui form">
+          <div class="field required">
+            <div class="ui left labeled input">
+              <div class="ui compact selection teal basic dropdown label">
+                <input type="hidden" value="原创">
+                <i class="dropdown icon"></i>
+                <div class="default text">原创</div>
+                <div class="menu">
+                  <div class="item" data-value="1">原创</div>
+                  <div class="item" data-value="2">转载</div>
+                  <div class="item" data-value="3">翻译</div>
+                </div>
+              </div>
+              <input type="text" name="title" placeholder="标题">
+            </div>
+          </div>
+
+          <div class="field">
+            <textarea name="content" placeholder="博客内容"></textarea>
+          </div>
+
+          <div class="two fields">
+            <div class="field">
+              <div class="ui left labeled action input">
+                <label class="ui compact teal basic label">分类</label>
+                <div class="ui selection fluid dropdown">
+                  <input type="hidden" name="type">
+                  <i class="dropdown icon"></i>
+                  <div class="default text">分类</div>
+                  <div class="menu">
+                    <div class="item" data-value="1">错误日志</div>
+                    <div class="item" data-value="2">开发者手册</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui left labeled action input">
+                <label class="ui compact teal basic label">标签</label>
+                <div class="ui selection multiple search fluid dropdown">
+                  <input type="hidden" name="tag">
+                  <i class="dropdown icon"></i>
+                  <div class="default text">标签(输入以搜索)</div>
+                  <div class="menu">
+                    <div class="item" data-value="1">Java</div>
+                    <div class="item" data-value="2">JavaScript</div>
+                    <div class="item" data-value="3">MySQL</div>
+                    <div class="item" data-value="4">Springboot</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 首图的引用地址 -->
+          <div class="field">
+            <div class="ui left labeled input">
+              <label class="ui teal basic label">封面图片</label>
+              <input type="text" name="indexPicture" placeholder="封面图片引用地址">
+            </div>
+          </div>
+          
+          <div class="ui segment">
+            <div class="inline fields">
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" id="recommend" name="recommend" checked class="hidden">
+                  <label for="recommend">推荐</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" id="shareInfo" name="shareInfo" class="hidden">
+                  <label for="shareInfo">转载声明</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" id="appreciation" name="appreciation" class="hidden">
+                  <label for="appreciation">赞赏</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui checkbox">
+                  <input type="checkbox" id="comment" name="comment" class="hidden">
+                  <label for="comment">评论</label>
+                </div>
+              </div>
+            </div>
+            <div class="ui error message"></div>
+            <div class="ui container right aligned">
+              <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
+              <button class="ui secondary button">保存</button>
+              <button class="ui teal button">发布</button>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+    <br>
+    <!-- 底部footer -->
+    <footer class="ui inverted vertical segment m-padding-tb-massive">
+      <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+          <div class="three wide column">
+            <div class="ui inverted link list">
+              <div class="item">
+                <img
+                  style="vertical-align: middle; width: 100px"
+                  src="../static/images/timg.jpg"
+                  class="ui rounded image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="three wide column">
+            <h4 class="ui inverted header m-text-thin m-text-spaced">
+              最新笔记
+            </h4>
+            <div class="ui inverted link list">
+              <a href="" class="item">用户故事</a>
+              <a href="" class="item">用户故事</a>
+              <a href="" class="item">用户故事</a>
+              <a href="" class="item">用户故事</a>
+            </div>
+          </div>
+          <div class="three wide column">
+            <h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+            <div class="ui inverted link list">
+              <a href="" class="item">Email: loca_gdgz@163.com</a>
+              <a href="" class="item">QQ: 1634181655</a>
+            </div>
+          </div>
+          <div class="seven wide column">
+            <h4 class="ui inverted header m-text-thin m-text-spaced">Notes</h4>
+            <p class="m-text-thin m-text-spaced m-opacity-mini">
+              这是我的个人笔记网站，会分享关于编程、写作、思考相关的任何内容
+            </p>
+          </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">
+          Copyright © 2020-2020 LockNLock Designed By Loca
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+  <script>
+    $(".menu.toggle").click(()=>{
+      $('.m-item').toggleClass('m-mobile-hide')
+    });
+    $(".ui.dropdown").dropdown({
+      on: "hover"
+    })
+    $(".ui.form").form({
+      fields: {
+        title: {
+          identifier: 'title',
+          rules: [{
+            type: 'empty',
+            prompt: '标题：请输入文章标题'
+          }]
+        }
+      }
+    })
+  </script>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>博客管理</title>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/me.css" />
+  </head>
+  <body>
+    <!-- 导航 -->
+    <nav class="ui inverted attached segment m-padding-tb-mini m-shadow-small">
+      <div class="ui container fluid">
+        <div class="ui inverted secondary stackable menu">
+          <h2 class="ui teal header item">管理后台</h2>
+            <a href="#" class="active item m-item m-mobile-hide">
+              <i class="home icon"></i>笔记
+            </a>
+          <a href="#" class="item m-item m-mobile-hide">
+            <i class="idea icon"></i>分类
+          </a>
+          <a href="#" class="item m-item m-mobile-hide">
+            <i class="tags icon" style="height: 10px;"></i>标签
+          </a>
+          <div class="right m-item menu m-mobile-hide">
+            <div class="ui dropdown item">
+              <div class="text">
+                <img src="http://iph.href.lu/100x100" class="ui avatar image">
+                LocaZZZZZ
+              </div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <a href="#" class="item">
+                  注销
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        href="#"
+        class="ui menu toggle black icon button m-right-top m-mobile-show"
+      >
+        <i class="sidebar icon"></i>
+      </a>
+    </nav>
+    <!-- 二级导航 -->
+    <div class="ui menu padded attached">
+      <div class="ui container">
+        <div class="right menu">
+          <a href="#" class="item">发布</a>
+          <a href="#" class="active teal item">列表</a>
+        </div>
+      </div>
+    </div>
+    <!-- 中间内容 -->
+    <div class="m-padding-tb-large m-container">
+      <div class="ui container">
+        <!-- 搜索区域 -->
+        <form action="#" method="POST" class="ui segment form">
+          <div class="inline fields">
+            <div class="field">
+              <input type="text" name="title" placeholder="标题">
+            </div>
+            <div class="field">
+              <div class="ui selection dropdown">
+                <input type="hidden" name="type">
+                <i class="dropdown icon"></i>
+                <div class="default text">分类</div>
+                <div class="menu">
+                  <div class="item" data-value="1">错误日志</div>
+                  <div class="item" data-value="2">开发者手册</div>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui checkbox">
+                <input type="checkbox" id="recommend" name="recommend">
+                <label for="recommend" style="cursor: pointer;">推荐</label>
+              </div>
+            </div>
+            <div class="field">
+              <button class="ui teal mini button"><i class="icon search"></i>搜索</button>
+            </div>
+          </div>
+        </form>
+        <table class="ui celled table center aligned">
+          <thead>
+            <tr>
+              <th></th>
+              <th>标题</th>
+              <th>类型</th>
+              <th>推荐</th>
+              <th>更新时间</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>刻意练习清单</td>
+              <td>认知升级</td>
+              <td>是</td>
+              <td>2020-10-17 01:02</td>
+              <td>
+                <button class="ui teal basic mini button"><i class="icon edit"></i>编辑</button>
+                <button class="ui red basic mini button"><i class="icon delete"></i>删除</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>刻意练习清单</td>
+              <td>认知升级</td>
+              <td>是</td>
+              <td>2020-10-17 01:02</td>
+              <td>
+                <button class="ui teal basic mini button"><i class="icon edit"></i>编辑</button>
+                <button class="ui red basic mini button"><i class="icon delete"></i>删除</button>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="6">
+                <div class="ui left floated mini pagination menu">
+                  <a class="item">上一页</a>
+                  <a class="item">下一页</a>
+                </div>
+                <a href="" class="ui right floated teal mini basic button">新增</a>
+              </th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <br>
+    <!-- 底部footer -->
+    <footer class="ui inverted vertical segment m-padding-tb-massive">
+      <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+          <div class="three wide column">
+            <div class="ui inverted link list">
+              <div class="item">
+                <img
+                  style="vertical-align: middle; width: 100px"
+                  src="../static/images/timg.jpg"
+                  class="ui rounded image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="three wide column">
+            <h4 class="ui inverted header m-text-thin m-text-spaced">
+              最新笔记
+            </h4>
+            <div class="ui inverted link list">
+              <a href="" class="item">用户故事</a>
+              <a href="" class="item">用户故事</a>
+              <a href="" class="item">用户故事</a>
+              <a href="" class="item">用户故事</a>
+            </div>
+          </div>
+          <div class="three wide column">
+            <h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+            <div class="ui inverted link list">
+              <a href="" class="item">Email: loca_gdgz@163.com</a>
+              <a href="" class="item">QQ: 1634181655</a>
+            </div>
+          </div>
+          <div class="seven wide column">
+            <h4 class="ui inverted header m-text-thin m-text-spaced">Notes</h4>
+            <p class="m-text-thin m-text-spaced m-opacity-mini">
+              这是我的个人笔记网站，会分享关于编程、写作、思考相关的任何内容
+            </p>
+          </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">
+          Copyright © 2020-2020 LockNLock Designed By Loca
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+  <script>
+    $(".menu.toggle").click(()=>{
+      $('.m-item').toggleClass('m-mobile-hide')
+    });
+    $(".ui.dropdown").dropdown({
+      on: "hover"
+    })
+  </script>
+</html>
